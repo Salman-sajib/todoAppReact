@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
-import Todo from './Todo';
+import Todo from "./Todo";
 
-export default function TodoList({ todos, setTodos, filtredTodos }) {
+const TodoList = ({ todos, setTodos, filtredTodos }) => {
+  console.log("Filtered Todos in TodoList:", filtredTodos);
+
   return (
-    <div className='todo-container'>
-      <ul className='todo-list'>
+    <div className="todo-container">
+      <ul className="todo-list">
         {filtredTodos.map((todo) => (
           <Todo
             todo={todo}
@@ -17,4 +19,6 @@ export default function TodoList({ todos, setTodos, filtredTodos }) {
       </ul>
     </div>
   );
-}
+};
+
+export default TodoList;
